@@ -3,8 +3,8 @@
 using System.Diagnostics;
 
 Conta conta = new Conta();
-conta.Saldo = 2000.00;
-conta.Limite = 100.00;
+// conta.Saldo = 2000.00;
+// conta.Limite = 100.00;
 
 double saldoLimite = conta.Saldo+conta.Limite;
 

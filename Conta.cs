@@ -3,7 +3,8 @@ public class Conta
     //Construtor da classe permite que sejam definidos valores padrão de início da instanciação da classe
     public Conta()
     {
-
+        Saldo = 2000;
+        Limite = 100;
     }
 
     //Propriedades

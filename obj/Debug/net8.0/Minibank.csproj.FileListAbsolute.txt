@@ -27,3 +27,4 @@ C:\Users\juliana.moliveira52\source\repos\Minibank\obj\Debug\net8.0\refint\Minib
 C:\Users\juliana.moliveira52\source\repos\Minibank\obj\Debug\net8.0\Minibank.pdb
 C:\Users\juliana.moliveira52\source\repos\Minibank\obj\Debug\net8.0\Minibank.genruntimeconfig.cache
 C:\Users\juliana.moliveira52\source\repos\Minibank\obj\Debug\net8.0\ref\Minibank.dll
+C:\Users\juliana.moliveira52\source\repos\Minibank\obj\Debug\net8.0\Minibank.sourcelink.json
