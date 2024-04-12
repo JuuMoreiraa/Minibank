@@ -14,12 +14,20 @@ public class Conta
     //Procedimentos (ação)
     public double Sacar(double valorS)
     {
-        return Saldo -= valorS;
+        Tarifar();
+        Saldo -= valorS;
+        return Saldo;
     }
 
     public double Depositar(double valorD)
     {
-        return Saldo += valorD;
+        Tarifar();
+        Saldo += valorD;
+        return Saldo;
     }
 
+    private double Tarifar()
+    {
+        return Saldo -= 0.5;
+    }
 }
