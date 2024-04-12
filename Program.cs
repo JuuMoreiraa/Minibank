@@ -14,7 +14,7 @@ tryagain:
 Console.WriteLine("");
 Console.WriteLine("Qual transação deseja efetuar na sua conta? \n[D]Depósito \n[S] Saque \n[V] Visualizar saldo da conta \n[X] Sair");
 string opcao = Console.ReadLine();
-
+double valor;
   //--------------------------------------------------------------------------------------------------------------------------//
  //Equals("s",StringComparison.OrdinalIgnoreCase) => usado no caso de letras maiúsculas/minúsculas nas opções do tipo string.//
 //--------------------------------------------------------------------------------------------------------------------------//
@@ -30,15 +30,15 @@ switch (opcao.ToUpper())
 
     case "S":
         Console.WriteLine("Qual valor você deseja sacar?");
-        double scr = double.Parse(Console.ReadLine());
-        if(scr > saldoLimite){
+        valor = double.Parse(Console.ReadLine());
+        if(valor >= conta.Limite){
             Console.WriteLine($"Transação não realizada. \nCod Motivo: C0045 - Saldo insuficiente para efetuar saque");
         } else { 
-            if(scr > conta.Saldo){
-                conta.Sacar(scr);
-                Console.WriteLine($"Saque realizado com sucesso utilizando o LIMITE da conta. O saldo atualizado na sua conta é de {scr-saldoLimite:c}");
+            if(valor > conta.Saldo){
+                conta.Sacar(valor);
+                Console.WriteLine($"Saque realizado com sucesso utilizando o LIMITE da conta. O saldo atualizado na sua conta é de {valor-conta.Limite:c}");
             } else {
-                conta.Sacar(scr);
+                conta.Sacar(valor);
                 Console.WriteLine($"Saque realizado com sucesso. O saldo restante na sua conta é de {conta.Saldo:c}");
             }
         }
